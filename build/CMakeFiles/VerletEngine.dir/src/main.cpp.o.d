@@ -213,5 +213,6 @@ CMakeFiles/VerletEngine.dir/src/main.cpp.o: \
  /usr/include/SFML/Graphics/Glsl.hpp /usr/include/SFML/Graphics/Glsl.inl \
  /usr/include/SFML/Graphics/Sprite.hpp \
  /usr/include/SFML/Graphics/Text.hpp \
- /usr/include/SFML/Graphics/VertexBuffer.hpp /usr/include/c++/14/iostream \
- /usr/include/c++/14/istream /usr/include/c++/14/bits/istream.tcc
+ /usr/include/SFML/Graphics/VertexBuffer.hpp /usr/include/c++/14/cstdint \
+ /usr/include/c++/14/iostream /usr/include/c++/14/istream \
+ /usr/include/c++/14/bits/istream.tcc
