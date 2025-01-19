@@ -1,16 +1,9 @@
+#include "renderer.hpp"
 #include <SFML/Graphics.hpp>
-#include <SFML/Graphics/RenderWindow.hpp>
-#include <SFML/Window/Context.hpp>
-#include <SFML/Window/ContextSettings.hpp>
-#include <SFML/Window/Event.hpp>
-#include <SFML/Window/Keyboard.hpp>
-#include <SFML/Window/VideoMode.hpp>
-#include <SFML/Window/Window.hpp>
 #include <cstdint>
 #include <iostream>
 
 int main(int argc, char *argv[]) {
-
   // Window settings
   constexpr int32_t window_width = 1000;
   constexpr int32_t window_height = 1000;
@@ -23,6 +16,9 @@ int main(int argc, char *argv[]) {
   const uint32_t frame_rate = 60;
   window.setFramerateLimit(frame_rate);
 
+  // Create Renderer instance
+  Renderer renderer(window);
+
   // Window Main Loop
   while (window.isOpen()) {
     sf::Event event; // Event creation
@@ -34,6 +30,10 @@ int main(int argc, char *argv[]) {
 
     // Clear window with black background
     window.clear(sf::Color::Black);
+
+    // Call Renderer Class
+    renderer.renderParticle(50.0f, sf::Vector2f(400.0f, 300.0f),
+                            sf::Color::Red);
 
     // Update Window
     window.display();
